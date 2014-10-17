@@ -108,5 +108,47 @@ Wie auch im Classicmodus ist eine möglichst hohe Punktzahl das Ziel, dafür ist
 
 ##Invasion
 
-Wie auch im Arcade wird die KI im späteren Verlauf mit immer mehr Käfern konfrontiert, allerdings kommen hier für je 50 erwirtschaftete Punkte neue Ameisen nach, bis zu ihrer Maximalzahl von 100. Die Punkte werden dabei entsprechend reduziert. Ziel ist es hier eine möglichst hohe Anzahl an Runden noch Ameisen auf dem Feld zu haben.</div>
+Wie auch im Arcade wird die KI im späteren Verlauf mit immer mehr Käfern konfrontiert, allerdings kommen hier für je 50 erwirtschaftete Punkte neue Ameisen nach, bis zu ihrer Maximalzahl von 100. Die Punkte werden dabei entsprechend reduziert. Ziel ist es hier eine möglichst hohe Anzahl an Runden noch Ameisen auf dem Feld zu haben.
+
+#Koordinatensystem
+
+
+```
+             
+        -400, 300                            400, 300
+                 ----------------------------
+                 |                          |
+                 |                          |
+                 |                          |
+                 |                          |
+                 |                          |
+                 |                          |
+                 |                          |
+                 |                          |
+                 |                          |
+                 |                          |
+                 ----------------------------
+       -400, -300                            400, -300                         
+       
+       
+       
+
+             
+             0, 0                            800, 0
+                 ----------------------------
+                 |                          |
+                 |                          |
+                 |                          |
+                 |                          |
+                 |                          |
+                 |                          |
+                 |                          |
+                 |                          |
+                 |                          |
+                 |                          |
+                 ----------------------------
+           0, 600                            800, 600                         
+           
+           
+ ```          
 

@@ -5,15 +5,15 @@ jAnt
 
 learn to program with a little ant simulator 
 
-Authors:
+## Authors:
 - Daniel Horn
 - André Fenske
 - M.D. 
 - André Tarnowsky
 
-#Ameisenbefehlsliste und Methoden
+# Ameisenbefehlsliste und Methoden
 
-##Drehen</h2>
+## Drehen</h2>
 
 Eine Ameise kann sich entweder drehen oder geradeaus laufen, wobei ein Drehbefehl immer Vorrang hat. Angegeben wird der Winkel für eine Drehung in Grad entsprechend dem Uhrzeigersinn. So ist 0 Grad rechts, 90 Grad unten usw. bis 360 Grad wieder rechts ist. Größere Winkel werden automatisch umgerechnet und die Ameise wird immer die kürzere Drehrichtung wählen, also maximal 180 Grad.
 
@@ -24,7 +24,7 @@ Eine Ameise kann sich entweder drehen oder geradeaus laufen, wobei ein Drehbefeh
 	<tr><td>dreheZuZiel(AllObject)</td><td>Die Ameise dreht sich in Richtung des angegebenen Ziels. Z.B. dreheZuZiel(zucker).</td></tr>
 </table>
 
-##Gehen
+## Gehen
 
 Die Längenangabe entspricht Schritten. Zum Vergleich: Eine Ameise misst 3 Schritt, ein Apfel
 
@@ -36,7 +36,7 @@ Die Längenangabe entspricht Schritten. Zum Vergleich: Eine Ameise misst 3 Schri
 	<tr><td>geheZuBau()</td><td>Die Ameise speichert den Bau als Ziel und geht dort hin. Hat die selbe Wirkung wie geheZuZiel(bau).</td></tr>
 </table>
 
-##Nahrung
+## Nahrung
 
 Gesammelte Nahrung erhöht den Punktestand. Nahrung muss zum Bau befördert werden. Ein Apfel wird erst bei 5 Trägern mit maximaler Geschwindigkeit transportiert.
 
@@ -45,7 +45,7 @@ Gesammelte Nahrung erhöht den Punktestand. Nahrung muss zum Bau befördert werd
 	<tr><td>lasseNahrungFallen()</td><td>Die Ameise lässt alle gerade getragene Nahrung fallen. Zucker geht dabei verloren, Äpfel werden liegen gelassen und können wieder aufgenommen werden. Der Befehl muss nicht ausgeführt werden um Nahrung im Bau abzuliefern. Das passiert dort automatisch.</td></tr>
 </table>
 
-##Volkeigenschaften
+## Volkeigenschaften
 
 <table>
 	<tr><td>getAngriff()</td><td>Gibt den Angriffswert der Ameise an. Er bestimmt wie viele Lebenspunkte die Ameise einem Gegner in jeder Runde abzieht. Ein Kampf wird automatisch abgewickelt.</td></tr>
@@ -54,7 +54,7 @@ Gesammelte Nahrung erhöht den Punktestand. Nahrung muss zum Bau befördert werd
 	<tr><td>getDrehgeschwindigkeit()</td><td>Gibt an wie viel Grad pro Runde sich die Ameise drehen kann.</td></tr>
 </table>
 
-##Ameisen-Eigenschaften
+## Ameisen-Eigenschaften
 
 <table>
 	<tr><td>getAktuelleEnergie()</td><td>Gibt an über wie viel Lebenspunkte die Ameise noch verfügt. Hat die Ameise 0 Lebenspunkte stirbt sie.</td></tr>
@@ -71,13 +71,13 @@ Gesammelte Nahrung erhöht den Punktestand. Nahrung muss zum Bau befördert werd
 	<tr><td>getZurueckgelegteStrecke()</td><td>Diese Funktion gibt die Gesamtzahl der Schritte an, die die Ameise seit ihrem letzten Besuch im Bau zurück gelegt hat.</td></tr>
 </table>
 
-##Hilfsbefehle für Nahrungsaufnahme
+## Hilfsbefehle für Nahrungsaufnahme
 
 <table>
 	<tr><td>brauchtNochTraeger(apfel)</td><td>Ermittelt ob der angegebene Apfel noch Träger braucht, um mit maximaler Geschwindigkeit transportiert werden zu können. Die maximale Anzahl an Trägern beträgt 5.</td></tr>
 </table>
 
-##Hilfsbefehle für Koordination
+## Hilfsbefehle für Koordination
 
 Die Klasse Koordinate.java ist ein Hilfsobjekt und wird mit einem Konstrukter erstellt, der zwei Objekte erfordert. Anschließend können die beide Hilfsmethoden, bezogen auf diese Objekte, genutzt werden.
 
@@ -90,29 +90,29 @@ Die Klasse Koordinate.java ist ein Hilfsobjekt und wird mit einem Konstrukter er
 	<tr><td>Zufall.zahl(int)<br />Zufall.zahl(int,int)</td><td>Erzeugt eine zufällige Zahl zwischen den angegebenen Grenzen. Wenn nur ein Parameter mitgegeben wird ist die untere Grenze 0. Das Ergebnis ist einschließlich des Intervalls.</td></tr>
 </table>
 
-##Befehle zur Koordination
+## Befehle zur Koordination
 
 <table>
 	<tr><td>erzeugeDuftwolke (int,int)</td><td>Erwartet einen Radius und eine Information, um eine Duftmarkierung zu erzeugen, die von anderen Ameisen wahrgenommen werden kann. Die Information wird dabei an die andere Ameise übermittelt und kann für vielfältige Zwecke verwendet werden.</td></tr>
 </table>
 
-#Spielmodi
+# Spielmodi
 
 Die Simulation unterstützt drei verschiedene Spielmodi, die unterschiedliche Strategien in der KI-Programmierung erfordern. Das Spiel endet in jedem Fall, wenn keine Ameisen mehr vorhanden sind. Die besten fünf Ergebnisse werden in die jeweilige Highscoreliste eingetragen.
 
-##Classic
+## Classic
 
 Ziel ist es eine möglichst hohe Punktzahl in 30 000 Runden zu erreichen. Zum Bau gebrachte Nahrung und getötete Käfer erhöhen den Punktestand, eine gestorbene Ameise senkt ihn.
 
-##Arcade
+## Arcade
 
 Wie auch im Classicmodus ist eine möglichst hohe Punktzahl das Ziel, dafür ist das Spiel erst dann zuende, wenn keine Ameisen mehr auf dem Feld sind. Je weiter der Spielfortschritt desto mehr Käfer werden die Ameisen bedrängen. Der Tod einer Ameise reduziert die Punkte nicht.
 
-##Invasion
+## Invasion
 
 Wie auch im Arcade wird die KI im späteren Verlauf mit immer mehr Käfern konfrontiert, allerdings kommen hier für je 50 erwirtschaftete Punkte neue Ameisen nach, bis zu ihrer Maximalzahl von 100. Die Punkte werden dabei entsprechend reduziert. Ziel ist es hier eine möglichst hohe Anzahl an Runden noch Ameisen auf dem Feld zu haben.
 
-#Koordinatensystem
+# Koordinatensystem
 
 
 ```
